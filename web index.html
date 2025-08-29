@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buat Website Otomatis</title>
+  <!-- Font Awesome (icon sosmed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url("https://files.catbox.moe/5wpbab.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .container {
+      background: rgba(20, 20, 20, 0.85);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
+      backdrop-filter: blur(8px);
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #00eaff;
+      margin-bottom: 12px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+    }
+    h2 {
+      text-align: center;
+      color: #00eaff;
+      margin-bottom: 20px;
+    }
+    label {
+      text-align: left;
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #ccc;
+      font-size: 14px;
+    }
+    input[type="text"], input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: none;
+      background: #111;
+      color: #fff;
+      outline: none;
+      transition: 0.3s;
+    }
+    input[type="text"]:focus, input[type="file"]:focus {
+      background: #1a1a1a;
+      border: 1px solid #00eaff;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #00d26a, #00eaff);
+      color: #fff;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 12px;
+      box-shadow: 0 4px 15px rgba(0, 234, 255, 0.3);
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 234, 255, 0.5);
+    }
+    .result {
+      margin-top: 18px;
+      background: rgba(0, 50, 0, 0.7);
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    a {
+      color: #00eaff;
+      text-decoration: none;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 13px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px;
+      border-radius: 10px;
+      color: #ddd;
+      line-height: 1.4;
+    }
+    .note b {
+      color: #00eaff;
+    }
+    .social {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social a {
+      font-size: 22px;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+    .social a:hover {
+      transform: scale(1.1);
+      background: rgba(0,234,255,0.2);
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Foto Profil -->
+    <img src="https://files.catbox.moe/ykmejq.png" alt="Profile" class="profile-pic">
+
+    <h2>🚀 Buat Website Otomatis</h2>
+
+    <form id="siteForm">
+      <label>Nama Website</label>
+      <input type="text" id="siteName" placeholder="contoh: webdark">
+
+      <label>Upload File HTML</label>
+      <input type="file" id="fileInput" accept=".html" required>
+
+      <button type="submit">Buat Sekarang</button>
+    </form>
+
+    <div id="result" class="result" style="display:none;">
+      ✅ Website berhasil dibuat!<br>
+      <a id="siteLink" href="#" target="_blank"></a>
+    </div>
+
+    <!-- Catatan Ajakan -->
+    <div class="note">
+      ✨ <b>Catatan:</b> Ingin website lebih keren dengan fitur premium?  
+      Jangan ragu untuk <b>hubungi admin</b> melalui kontak di bawah 👇
+    </div>
+
+    <!-- Kontak Admin dengan Icon -->
+    <div style="margin-top:20px; font-size:14px;">
+      📞 <b>HUBUNGI ADMIN</b>
+      <div class="social">
+        <a href="https://wa.me/6287727075402" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/kontakdarknih" target="_blank" style="color:#0088cc;"><i class="fab fa-telegram"></i></a>
+        <a href="https://tiktok.com/@vaniiiia03" target="_blank" style="color:#fff;"><i class="fab fa-tiktok"></i></a>
+        <a href="https://whatsapp.com/channel/0029VbABUmB6buMBBK79Vy2j" target="_blank" style="color:#25D366;"><i class="fas fa-users"></i></a>
+        <a href="https://t.me/inovip" target="_blank" style="color:#0088cc;"><i class="fas fa-bullhorn"></i></a>
+      </div>
+    </div>
+
+    <div class="footer">
+      Ⓒ Create by <span style="color:#00eaff;">𝕯𝖆𝖗𝖐𝕬𝖓𝖌𝖊𝖑</span>
+    </div>
+  </div>
+</body>
+</html>
